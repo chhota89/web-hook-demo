@@ -20,6 +20,6 @@ app.post('/echo', function(req, res){
 });
 
 
-var server = app.listen(8081, function () {
-    console.log('Server is running..');
+var server = app.listen(process.env.PORT || 3000, function () {
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
